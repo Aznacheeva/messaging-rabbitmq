@@ -26,8 +26,10 @@ public class Runner implements CommandLineRunner {
 		System.out.println("You have been accessed to messaging. Enter \"quit\" to quit messaging");
 		while (true) {
 			String message = scanner.nextLine();
-			if (message.equals("quit"))
+			if (message.equals("quit")) {
 				sendMessage(username + " is disconnected");
+				break;
+			}
 			if (message.isBlank()) continue;
 			sendMessage(username + ": " + message);
 		}
