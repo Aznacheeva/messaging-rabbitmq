@@ -19,7 +19,7 @@ public class MessagingRabbitmqApplication {
 
 	@Bean
 	Queue queue() {
-		return new Queue(queueName, true, true, true);
+		return new Queue(queueName, false, true, true);
 		//Если параметр exclusive установлен, то параметр autoDelete не имеет никакого эффекта.
 	}
 
